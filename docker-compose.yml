@@ -1,0 +1,22 @@
+version: '2'
+services:
+  server:
+    restart: always
+    image: dalle-mcp-sse:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - .env:/app/build/.env
+    command: ["sh", "-c", "cd /app/build && node index.js"]
+    # environment:
+    #   - PORT=3000
+    #   - OPENAI_API_KEY=''
+
+  redis:
+    restart: always
+    image: apache/kvrocks:2.8.0
+    ports:
+      - "6379"
+    volumes:
+      - ./data/redis:/data
+    command: --dir /data --bind 0.0.0.0 --port 6379
