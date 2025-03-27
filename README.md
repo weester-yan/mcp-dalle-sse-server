@@ -10,6 +10,7 @@ This project is a server-side implementation that utilizes OpenAI's Dall-E model
 
 - **Real-time Image Generation**: Generate images in real-time using OpenAI's Dall-E model.
 - **Server-Sent Events**: Stream the image generation process to clients using SSE.
+- **Multi-client Support**: Supports multiple SSE clients connecting to the server simultaneously.
 - **JavaScript and TypeScript**: Written primarily in JavaScript and TypeScript for robust and scalable development.
 
 ## Language Composition
